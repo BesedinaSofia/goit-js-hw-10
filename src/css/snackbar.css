@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin: 50px;
   text-align: center;
 }
@@ -8,21 +8,21 @@ body {
   display: inline-block;
   text-align: left;
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.border{
+  border: 1px solid #808080;
+  display:flex;
+  gap: 45px;
+}
+
+.border:hover{
+  border: 1px solid  #000;
 }
 
 label {
   display: block;
   margin-bottom: 15px;
-  font-size: 1rem;
-}
-
-input[type='number'] {
-  width: 100%;
-  padding: 5px;
-  margin-top: 5px;
   font-size: 1rem;
 }
 
@@ -32,25 +32,104 @@ fieldset {
 }
 
 legend {
-  font-weight: bold;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+letter-spacing: 0.04em;
+color: #2e2f42;
   margin-bottom: 10px;
 }
 
-button {
-  padding: 10px 20px;
-  font-size: 1rem;
-  color: #fff;
-  background-color: #007bff;
-  border: none;
+input[type="text"], input[type="number"], select {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid  #808080;
   border-radius: 4px;
-  cursor: pointer;
+  transition: all 0.2s ease;
+  outline: none;
 }
+
+input[type='number'] {
+width: 100%;
+}
+
+
+input[type="text"]:hover, input[type="number"]:hover, select:hover {
+  border-color: #000; 
+}
+
+
+input[type="text"]:focus, input[type="number"]:focus, select:focus {
+  border-color: #3b82f6; 
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.4);
+}
+
+
+input[type="radio"] {
+  accent-color: #3b82f6; 
+  margin-right: 8px;
+}
+
+
+button {
+  color: #fff; 
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 360px;
+  height: 40px;
+  background: #4e75ff;
+}
+
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #2563eb;
 }
 
-button:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
+/* Повідомлення: успішне */
+.notification-success {
+  background-color: #22c55e; /* Зелений */
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
+
+/* Повідомлення: помилка */
+.notification-error {
+  background-color: #ef4444; /* Червоний */
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Повідомлення: попередження */
+.notification-warning {
+  background-color: #f59e0b; /* Жовтогарячий */
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Повідомлення: інформація */
+.notification-info {
+  background-color: #3b82f6; /* Синій */
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
